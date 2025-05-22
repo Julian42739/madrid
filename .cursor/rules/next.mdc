@@ -1,0 +1,61 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Necesito que conviertas una página web construida con Vite a Next.js sin modificar el código ni la estructura de la página. Solo debes ajustar la configuración y estructura para que funcione correctamente en Next.js. Aquí están los pasos detallados que debes seguir:
+
+Crear un nuevo proyecto Next.js:
+
+Utiliza el siguiente comando para crear un proyecto Next.js desde cero:
+
+
+npx create-next-app@latest mi-nuevo-proyecto
+cd mi-nuevo-proyecto
+Mover los archivos de Vite al proyecto Next.js:
+
+Copia los archivos de tu proyecto hecho en Vite a la estructura del proyecto Next.js:
+
+Archivos de la página principal, componentes y cualquier archivo necesario deben ser colocados dentro de la carpeta pages y components de Next.js.
+
+Archivos estáticos (como imágenes, fuentes, etc.) deben ser movidos a la carpeta public de Next.js.
+
+Configurar el archivo index.js o index.tsx:
+
+El archivo principal de Next.js es pages/index.js (o pages/index.tsx si usas TypeScript). Asegúrate de que el contenido principal de la página esté aquí o en componentes importados.
+
+Instalar las dependencias necesarias:
+
+Instala todas las dependencias que pueda estar utilizando tu página de Vite ejecutando:
+
+
+npm install
+Ajustar las rutas y enlaces:
+
+Verifica todos los enlaces y rutas dentro del proyecto Vite:
+
+Asegúrate de que las rutas relativas y dinámicas sean convertidas a rutas absolutas donde sea necesario en Next.js.
+
+Next.js maneja las rutas de manera diferente, ya que cada archivo dentro de pages corresponde a una ruta, así que debes asegurarte de que las rutas estén correctamente configuradas.
+
+Verificar el funcionamiento en el entorno de desarrollo:
+
+Ejecuta el servidor de desarrollo de Next.js para probar la página:
+
+
+npm run dev
+Asegúrate de que la página se cargue correctamente en http://localhost:3000.
+
+Gestionar archivos estáticos:
+
+Si tu proyecto Vite tiene archivos estáticos (como imágenes, fuentes, etc.), muévelos a la carpeta public de Next.js.
+
+Los archivos en public pueden ser accedidos mediante rutas absolutas, por ejemplo: /imagen.jpg.
+
+Construir la aplicación para producción:
+
+Una vez todo esté funcionando correctamente en desarrollo, ejecuta la construcción para producción:
+
+npm run build
+
+npm start
